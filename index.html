@@ -23,9 +23,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--black);
     color: var(--white);
@@ -34,7 +32,6 @@
     cursor: none;
   }
 
-  /* Custom cursor */
   .cursor {
     width: 8px; height: 8px;
     background: var(--gold);
@@ -58,7 +55,6 @@
     opacity: 0.5;
   }
 
-  /* Grain overlay */
   body::before {
     content: '';
     position: fixed;
@@ -69,7 +65,6 @@
     opacity: 0.4;
   }
 
-  /* Nav */
   nav {
     position: fixed; top: 0; left: 0; right: 0;
     z-index: 100;
@@ -79,7 +74,6 @@
     align-items: center;
     background: linear-gradient(to bottom, rgba(8,8,9,0.95), transparent);
   }
-
   .nav-logo {
     font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
@@ -88,10 +82,6 @@
     letter-spacing: 0.15em;
     text-decoration: none;
   }
-  .nav-logo span {
-    color: var(--gold);
-  }
-
   .nav-links {
     display: flex;
     gap: 40px;
@@ -107,7 +97,6 @@
   }
   .nav-links a:hover { color: var(--gold); }
 
-  /* Hero */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -117,7 +106,6 @@
     position: relative;
     overflow: hidden;
   }
-
   .hero-bg {
     position: absolute;
     inset: 0;
@@ -125,7 +113,6 @@
       radial-gradient(ellipse 60% 50% at 80% 20%, rgba(201,168,76,0.07) 0%, transparent 70%),
       radial-gradient(ellipse 40% 60% at 10% 80%, rgba(201,168,76,0.04) 0%, transparent 60%);
   }
-
   .hero-lines {
     position: absolute;
     top: 0; right: 0;
@@ -139,7 +126,6 @@
       rgba(201,168,76,0.03) 61px
     );
   }
-
   .hero-tag {
     font-family: 'DM Mono', monospace;
     font-size: 11px;
@@ -149,7 +135,6 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.2s forwards;
   }
-
   .hero-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(64px, 10vw, 120px);
@@ -161,11 +146,7 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.4s forwards;
   }
-  .hero-name em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
+  .hero-name em { font-style: italic; color: var(--gold); }
   .hero-sub {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(18px, 3vw, 28px);
@@ -176,7 +157,6 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.6s forwards;
   }
-
   .hero-cta {
     display: flex;
     gap: 20px;
@@ -184,7 +164,6 @@
     opacity: 0;
     animation: fadeUp 0.8s ease 0.8s forwards;
   }
-
   .btn-primary {
     display: inline-block;
     padding: 14px 36px;
@@ -197,11 +176,7 @@
     text-decoration: none;
     transition: all 0.2s;
   }
-  .btn-primary:hover {
-    background: var(--white);
-    transform: translateY(-2px);
-  }
-
+  .btn-primary:hover { background: var(--white); transform: translateY(-2px); }
   .btn-ghost {
     display: inline-block;
     padding: 14px 36px;
@@ -213,15 +188,11 @@
     text-decoration: none;
     transition: all 0.2s;
   }
-  .btn-ghost:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
 
   .hero-scroll {
     position: absolute;
-    bottom: 40px;
-    right: 48px;
+    bottom: 40px; right: 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -237,13 +208,11 @@
     writing-mode: vertical-rl;
   }
   .scroll-line {
-    width: 1px;
-    height: 60px;
+    width: 1px; height: 60px;
     background: linear-gradient(to bottom, var(--gold), transparent);
     animation: scrollPulse 2s ease infinite;
   }
 
-  /* Credential bar */
   .credential-bar {
     background: var(--surface);
     border-top: 1px solid var(--border);
@@ -261,27 +230,11 @@
     white-space: nowrap;
     flex-shrink: 0;
   }
-  .cred-dot {
-    width: 4px; height: 4px;
-    background: var(--gold);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .cred-text {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--dim);
-    letter-spacing: 0.1em;
-  }
-  .cred-text strong {
-    color: var(--light);
-    font-weight: 500;
-  }
+  .cred-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+  .cred-text { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--dim); letter-spacing: 0.1em; }
+  .cred-text strong { color: var(--light); font-weight: 500; }
 
-  /* Sections */
-  section {
-    padding: 120px 48px;
-  }
+  section { padding: 120px 48px; }
 
   .section-label {
     font-family: 'DM Mono', monospace;
@@ -303,10 +256,7 @@
   }
 
   /* Services */
-  .services {
-    background: var(--deep);
-  }
-
+  .services { background: var(--deep); }
   .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -314,7 +264,6 @@
     background: var(--border);
     border: 1px solid var(--border);
   }
-
   .service-card {
     background: var(--deep);
     padding: 48px 40px;
@@ -334,77 +283,18 @@
   }
   .service-card:hover { background: var(--surface); }
   .service-card:hover::before { transform: scaleX(1); }
-
-  .service-number {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--gold);
-    opacity: 0.6;
-    letter-spacing: 0.1em;
-    margin-bottom: 24px;
-  }
-
-  .service-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 400;
-    color: var(--white);
-    margin-bottom: 16px;
-    line-height: 1.1;
-  }
-
-  .service-desc {
-    font-size: 14px;
-    color: var(--dim);
-    line-height: 1.7;
-    margin-bottom: 28px;
-    font-weight: 400;
-  }
-
-  .service-tools {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .tool-tag {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    color: var(--gold);
-    background: var(--gold-dim);
-    padding: 4px 10px;
-    letter-spacing: 0.08em;
-  }
+  .service-number { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--gold); opacity: 0.6; letter-spacing: 0.1em; margin-bottom: 24px; }
+  .service-title { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; color: var(--white); margin-bottom: 16px; line-height: 1.1; }
+  .service-desc { font-size: 14px; color: var(--dim); line-height: 1.7; margin-bottom: 28px; font-weight: 400; }
+  .service-tools { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tool-tag { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--gold); background: var(--gold-dim); padding: 4px 10px; letter-spacing: 0.08em; }
 
   /* Credits */
-  .credits-section {
-    background: var(--black);
-  }
-
-  .credits-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 60px;
-    flex-wrap: wrap;
-    gap: 24px;
-  }
-
-  .credits-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(36px, 6vw, 64px);
-    font-weight: 300;
-    color: var(--white);
-    line-height: 1;
-  }
+  .credits-section { background: var(--black); }
+  .credits-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; flex-wrap: wrap; gap: 24px; }
+  .credits-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 64px); font-weight: 300; color: var(--white); line-height: 1; }
   .credits-title em { font-style: italic; color: var(--gold); }
-
-  .credits-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    border: 1px solid var(--border);
-  }
-
+  .credits-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--border); }
   .credit-row {
     display: grid;
     grid-template-columns: 1fr 1fr auto;
@@ -427,45 +317,163 @@
     transition: transform 0.2s;
   }
   .credit-row:hover::before { transform: scaleY(1); }
+  .credit-project { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: var(--white); line-height: 1.2; }
+  .credit-artist { font-size: 12px; color: var(--dim); margin-top: 4px; font-family: 'DM Mono', monospace; letter-spacing: 0.05em; }
+  .credit-role { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--mid); letter-spacing: 0.08em; }
+  .credit-badge { font-family: 'DM Mono', monospace; font-size: 9px; padding: 4px 10px; letter-spacing: 0.1em; white-space: nowrap; }
+  .badge-gold { background: var(--gold-dim); color: var(--gold); border: 1px solid var(--gold-glow); }
+  .badge-neutral { background: transparent; color: var(--muted); border: 1px solid var(--border); }
 
-  .credit-project {
+  /* ── VIDEO SECTION ── */
+  .video-section {
+    background: var(--deep);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .video-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .video-section-title {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 18px;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+  .video-section-title em { font-style: italic; color: var(--gold); }
+
+  .video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+
+  .video-card {
+    background: var(--deep);
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+  .video-card:hover { background: var(--surface); }
+
+  .video-embed-wrap {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 */
+    background: var(--black);
+    overflow: hidden;
+  }
+
+  /* Thumbnail state */
+  .video-thumb {
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s;
+  }
+  .video-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+    transition: filter 0.3s;
+  }
+  .video-thumb:hover img { filter: brightness(0.5); }
+
+  .play-btn {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border: 2px solid var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    background: rgba(8,8,9,0.5);
+    backdrop-filter: blur(4px);
+  }
+  .video-thumb:hover .play-btn {
+    background: var(--gold);
+    transform: scale(1.1);
+  }
+  .play-icon {
+    width: 0;
+    height: 0;
+    border-top: 11px solid transparent;
+    border-bottom: 11px solid transparent;
+    border-left: 18px solid var(--gold);
+    margin-left: 4px;
+    transition: border-left-color 0.2s;
+  }
+  .video-thumb:hover .play-icon { border-left-color: var(--black); }
+
+  /* iframe hidden until clicked */
+  .video-iframe-wrap {
+    position: absolute;
+    inset: 0;
+    display: none;
+  }
+  .video-iframe-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  .video-iframe-wrap.active { display: block; }
+  .video-thumb.hidden { display: none; }
+
+  .video-meta {
+    padding: 28px 32px 32px;
+    position: relative;
+  }
+  .video-meta::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 32px; right: 32px;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .video-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
     font-weight: 400;
     color: var(--white);
     line-height: 1.2;
+    margin-bottom: 6px;
   }
-  .credit-artist {
-    font-size: 12px;
+  .video-artist {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
     color: var(--dim);
-    margin-top: 4px;
-    font-family: 'DM Mono', monospace;
-    letter-spacing: 0.05em;
-  }
-
-  .credit-role {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--mid);
     letter-spacing: 0.08em;
+    margin-bottom: 16px;
   }
-
-  .credit-badge {
+  .video-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .video-role-tag {
     font-family: 'DM Mono', monospace;
     font-size: 9px;
-    padding: 4px 10px;
-    letter-spacing: 0.1em;
-    white-space: nowrap;
-  }
-  .badge-gold {
-    background: var(--gold-dim);
     color: var(--gold);
-    border: 1px solid var(--gold-glow);
-  }
-  .badge-neutral {
-    background: transparent;
-    color: var(--muted);
-    border: 1px solid var(--border);
+    background: var(--gold-dim);
+    padding: 4px 10px;
+    letter-spacing: 0.06em;
   }
 
   /* About */
@@ -474,40 +482,12 @@
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
-
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .about-text {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 1.65;
-    color: var(--light);
-  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .about-text { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 300; line-height: 1.65; color: var(--light); }
   .about-text em { font-style: italic; color: var(--gold); }
-
-  .about-right {}
-
-  .skills-block {
-    margin-bottom: 40px;
-  }
-  .skills-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    color: var(--gold);
-    letter-spacing: 0.2em;
-    margin-bottom: 16px;
-  }
-  .skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
+  .skills-block { margin-bottom: 40px; }
+  .skills-label { font-family: 'DM Mono', monospace; font-size: 9px; color: var(--gold); letter-spacing: 0.2em; margin-bottom: 16px; }
+  .skills-list { display: flex; flex-wrap: wrap; gap: 8px; }
   .skill-chip {
     font-family: 'DM Mono', monospace;
     font-size: 10px;
@@ -518,73 +498,19 @@
     letter-spacing: 0.06em;
     transition: all 0.2s;
   }
-  .skill-chip:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-  }
-
-  .education-block {
-    padding-top: 40px;
-    border-top: 1px solid var(--border);
-  }
-  .edu-item {
-    margin-bottom: 20px;
-  }
-  .edu-school {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 17px;
-    color: var(--white);
-  }
-  .edu-detail {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--dim);
-    letter-spacing: 0.08em;
-    margin-top: 4px;
-  }
+  .skill-chip:hover { border-color: var(--gold); color: var(--gold); }
+  .education-block { padding-top: 40px; border-top: 1px solid var(--border); }
+  .edu-item { margin-bottom: 20px; }
+  .edu-school { font-family: 'Cormorant Garamond', serif; font-size: 17px; color: var(--white); }
+  .edu-detail { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--dim); letter-spacing: 0.08em; margin-top: 4px; }
 
   /* Contact */
-  .contact-section {
-    background: var(--black);
-    text-align: center;
-    padding: 160px 48px;
-  }
-
-  .contact-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--gold);
-    letter-spacing: 0.25em;
-    margin-bottom: 32px;
-  }
-
-  .contact-headline {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(48px, 8vw, 96px);
-    font-weight: 300;
-    color: var(--white);
-    line-height: 0.95;
-    margin-bottom: 16px;
-    letter-spacing: -0.02em;
-  }
+  .contact-section { background: var(--black); text-align: center; padding: 160px 48px; }
+  .contact-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--gold); letter-spacing: 0.25em; margin-bottom: 32px; }
+  .contact-headline { font-family: 'Cormorant Garamond', serif; font-size: clamp(48px, 8vw, 96px); font-weight: 300; color: var(--white); line-height: 0.95; margin-bottom: 16px; letter-spacing: -0.02em; }
   .contact-headline em { font-style: italic; color: var(--gold); }
-
-  .contact-sub {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--dim);
-    margin-bottom: 60px;
-  }
-
-  .contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
+  .contact-sub { font-family: 'Cormorant Garamond', serif; font-size: 20px; font-weight: 300; font-style: italic; color: var(--dim); margin-bottom: 60px; }
+  .contact-links { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
   .contact-link {
     display: flex;
     align-items: center;
@@ -598,13 +524,8 @@
     letter-spacing: 0.12em;
     transition: all 0.2s;
   }
-  .contact-link:hover {
-    border-color: var(--gold);
-    color: var(--gold);
-    background: var(--gold-dim);
-  }
+  .contact-link:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-dim); }
 
-  /* Footer */
   footer {
     background: var(--deep);
     border-top: 1px solid var(--border);
@@ -615,14 +536,8 @@
     flex-wrap: wrap;
     gap: 16px;
   }
-  footer span {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-  }
+  footer span { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); letter-spacing: 0.08em; }
 
-  /* Animations */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
@@ -632,7 +547,6 @@
     50% { opacity: 0.3; }
   }
 
-  /* Mobile */
   @media (max-width: 768px) {
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
@@ -641,6 +555,7 @@
     .credential-bar { padding: 16px 24px; }
     .about-grid { grid-template-columns: 1fr; gap: 48px; }
     .credit-row { grid-template-columns: 1fr; gap: 8px; }
+    .video-grid { grid-template-columns: 1fr; }
     .contact-section { padding: 100px 24px; }
     footer { padding: 24px; }
     body { cursor: auto; }
@@ -653,22 +568,20 @@
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- Nav -->
 <nav>
   <a href="#" class="nav-logo">Sound<em style="font-style:italic;color:var(--gold)">phonetix</em></a>
   <ul class="nav-links">
     <li><a href="#services">SERVICES</a></li>
     <li><a href="#credits">CREDITS</a></li>
+    <li><a href="#video">VIDEO</a></li>
     <li><a href="#about">ABOUT</a></li>
     <li><a href="#contact">CONTACT</a></li>
   </ul>
 </nav>
 
-<!-- Hero -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-lines"></div>
-
   <div class="hero-tag">RECORDING · PRODUCTION · ENGINEERING</div>
   <h1 class="hero-name">Colby<br><em>Jackson</em></h1>
   <p class="hero-sub">Recording & Production Engineer — Tacoma, WA</p>
@@ -676,46 +589,24 @@
     <a href="#contact" class="btn-primary">BOOK A SESSION</a>
     <a href="#credits" class="btn-ghost">VIEW CREDITS</a>
   </div>
-
   <div class="hero-scroll">
     <div class="scroll-line"></div>
     <span>SCROLL</span>
   </div>
 </section>
 
-<!-- Credential Bar -->
 <div class="credential-bar">
-  <div class="cred-item">
-    <div class="cred-dot"></div>
-    <div class="cred-text"><strong>Grammy-Winning Artist</strong> · Ganesh Rajagopalan</div>
-  </div>
-  <div class="cred-item">
-    <div class="cred-dot"></div>
-    <div class="cred-text"><strong>B.M. Music Production</strong> · Berklee College of Music, 2026</div>
-  </div>
-  <div class="cred-item">
-    <div class="cred-dot"></div>
-    <div class="cred-text"><strong>The New School</strong> · Jazz & Contemporary Music, NYC</div>
-  </div>
-  <div class="cred-item">
-    <div class="cred-dot"></div>
-    <div class="cred-text"><strong>8+ Years</strong> · Studio, Mobile & Live Production</div>
-  </div>
-  <div class="cred-item">
-    <div class="cred-dot"></div>
-    <div class="cred-text"><strong>KNKX Public Radio</strong> · Featured Guest DJ</div>
-  </div>
-  <div class="cred-item">
-    <div class="cred-dot"></div>
-    <div class="cred-text"><strong>Founder</strong> · Soundphonetix LLC</div>
-  </div>
+  <div class="cred-item"><div class="cred-dot"></div><div class="cred-text"><strong>Grammy-Winning Artist</strong> · Ganesh Rajagopalan</div></div>
+  <div class="cred-item"><div class="cred-dot"></div><div class="cred-text"><strong>B.M. Music Production</strong> · Berklee College of Music, 2026</div></div>
+  <div class="cred-item"><div class="cred-dot"></div><div class="cred-text"><strong>The New School</strong> · Jazz & Contemporary Music, NYC</div></div>
+  <div class="cred-item"><div class="cred-dot"></div><div class="cred-text"><strong>8+ Years</strong> · Studio, Mobile & Live Production</div></div>
+  <div class="cred-item"><div class="cred-dot"></div><div class="cred-text"><strong>KNKX Public Radio</strong> · Featured Guest DJ</div></div>
+  <div class="cred-item"><div class="cred-dot"></div><div class="cred-text"><strong>Founder</strong> · Soundphonetix LLC</div></div>
 </div>
 
-<!-- Services -->
 <section class="services" id="services">
   <div class="section-label">01 — SERVICES</div>
   <div class="services-grid">
-
     <div class="service-card">
       <div class="service-number">001</div>
       <h3 class="service-title">Recording &<br>Engineering</h3>
@@ -727,7 +618,6 @@
         <span class="tool-tag">STUDIO</span>
       </div>
     </div>
-
     <div class="service-card">
       <div class="service-number">002</div>
       <h3 class="service-title">Mixing &<br>Mastering</h3>
@@ -739,7 +629,6 @@
         <span class="tool-tag">LOGIC PRO</span>
       </div>
     </div>
-
     <div class="service-card">
       <div class="service-number">003</div>
       <h3 class="service-title">Video &<br>Post-Production</h3>
@@ -751,7 +640,6 @@
         <span class="tool-tag">LIVE VIDEO</span>
       </div>
     </div>
-
     <div class="service-card">
       <div class="service-number">004</div>
       <h3 class="service-title">Production &<br>Arrangement</h3>
@@ -763,18 +651,15 @@
         <span class="tool-tag">COMPOSITION</span>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- Credits -->
 <section class="credits-section" id="credits">
   <div class="section-label">02 — SELECTED CREDITS</div>
   <div class="credits-header">
     <h2 class="credits-title">The<br><em>Work</em></h2>
   </div>
   <div class="credits-list">
-
     <div class="credit-row">
       <div>
         <div class="credit-project">Thribhinna: The Indian Symphony Project</div>
@@ -783,7 +668,6 @@
       <div class="credit-role">MOBILE RECORDING ENGINEER</div>
       <span class="credit-badge badge-gold">GRAMMY-WINNING ARTIST</span>
     </div>
-
     <div class="credit-row">
       <div>
         <div class="credit-project">Jazz at the Garage Vol. 1</div>
@@ -792,7 +676,6 @@
       <div class="credit-role">PRODUCER · ENGINEER · MIXER · MASTERING · VIDEO EDITOR</div>
       <span class="credit-badge badge-neutral">2025</span>
     </div>
-
     <div class="credit-row">
       <div>
         <div class="credit-project">The Baritone and B3 Trio</div>
@@ -801,7 +684,6 @@
       <div class="credit-role">PRODUCER · ENGINEER · MIXER · MASTERING</div>
       <span class="credit-badge badge-neutral">2024</span>
     </div>
-
     <div class="credit-row">
       <div>
         <div class="credit-project">Too High A Price To Pay</div>
@@ -810,7 +692,6 @@
       <div class="credit-role">SECOND ENGINEER</div>
       <span class="credit-badge badge-neutral">ALBUM CREDIT</span>
     </div>
-
     <div class="credit-row">
       <div>
         <div class="credit-project">Transition (Music Video)</div>
@@ -819,7 +700,6 @@
       <div class="credit-role">VIDEO EDITOR</div>
       <span class="credit-badge badge-neutral">2024</span>
     </div>
-
     <div class="credit-row">
       <div>
         <div class="credit-project">Lots of Space, Nothing Holy</div>
@@ -828,7 +708,6 @@
       <div class="credit-role">PRODUCER · ENGINEER · MIXER · MASTERING</div>
       <span class="credit-badge badge-neutral">DEBUT ALBUM</span>
     </div>
-
     <div class="credit-row">
       <div>
         <div class="credit-project">William Bentley · Ponderosa EP</div>
@@ -837,7 +716,6 @@
       <div class="credit-role">RECORDING ENGINEER · PRODUCER · MIXER · MASTERING</div>
       <span class="credit-badge badge-neutral">COMMERCIAL</span>
     </div>
-
     <div class="credit-row">
       <div>
         <div class="credit-project">Jazz is Musical Freedom</div>
@@ -846,13 +724,84 @@
       <div class="credit-role">FEATURED GUEST DJ</div>
       <span class="credit-badge badge-gold">PUBLIC RADIO</span>
     </div>
+  </div>
+</section>
+
+<!-- Video Section -->
+<section class="video-section" id="video">
+  <div class="section-label">03 — VIDEO WORK</div>
+  <div class="video-section-header">
+    <h2 class="video-section-title">On<br><em>Camera</em></h2>
+  </div>
+  <div class="video-grid">
+
+    <!-- Card 1: Noah Pettibon - Chelsea Bridge -->
+    <div class="video-card">
+      <div class="video-embed-wrap">
+        <div class="video-thumb" id="thumb-1" onclick="playVideo('1', 'nCntDWRXwkE')">
+          <img src="https://img.youtube.com/vi/nCntDWRXwkE/maxresdefault.jpg" alt="Chelsea Bridge thumbnail" onerror="this.src='https://img.youtube.com/vi/nCntDWRXwkE/hqdefault.jpg'">
+          <div class="play-btn"><div class="play-icon"></div></div>
+        </div>
+        <div class="video-iframe-wrap" id="iframe-1"></div>
+      </div>
+      <div class="video-meta">
+        <div class="video-title">"Chelsea Bridge"</div>
+        <div class="video-artist">NOAH PETTIBON · Jazz at the Garage Vol. 1</div>
+        <div class="video-roles">
+          <span class="video-role-tag">PRODUCER</span>
+          <span class="video-role-tag">RECORDING ENGINEER</span>
+          <span class="video-role-tag">MIXING</span>
+          <span class="video-role-tag">MASTERING</span>
+          <span class="video-role-tag">VIDEO EDITOR</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2: Ganesh Rajagopalan -->
+    <div class="video-card">
+      <div class="video-embed-wrap">
+        <div class="video-thumb" id="thumb-2" onclick="playVideo('2', 'Zk_rabjVmtY')">
+          <img src="https://img.youtube.com/vi/Zk_rabjVmtY/maxresdefault.jpg" alt="Suddha Danyasi thumbnail" onerror="this.src='https://img.youtube.com/vi/Zk_rabjVmtY/hqdefault.jpg'">
+          <div class="play-btn"><div class="play-icon"></div></div>
+        </div>
+        <div class="video-iframe-wrap" id="iframe-2"></div>
+      </div>
+      <div class="video-meta">
+        <div class="video-title">Suddha Danyasi Ragapravaham</div>
+        <div class="video-artist">GANESH RAJAGOPALAN · Grammy-Winning Artist</div>
+        <div class="video-roles">
+          <span class="video-role-tag">MOBILE RECORDING ENGINEER</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: LJ Collective - Bump -->
+    <div class="video-card">
+      <div class="video-embed-wrap">
+        <div class="video-thumb" id="thumb-3" onclick="playVideo('3', 'hrZkUbW-1QI')">
+          <img src="https://img.youtube.com/vi/hrZkUbW-1QI/maxresdefault.jpg" alt="Bump thumbnail" onerror="this.src='https://img.youtube.com/vi/hrZkUbW-1QI/hqdefault.jpg'">
+          <div class="play-btn"><div class="play-icon"></div></div>
+        </div>
+        <div class="video-iframe-wrap" id="iframe-3"></div>
+      </div>
+      <div class="video-meta">
+        <div class="video-title">Bump</div>
+        <div class="video-artist">LJ COLLECTIVE · 2021</div>
+        <div class="video-roles">
+          <span class="video-role-tag">PRODUCER</span>
+          <span class="video-role-tag">RECORDING ENGINEER</span>
+          <span class="video-role-tag">MIXING</span>
+          <span class="video-role-tag">MASTERING</span>
+          <span class="video-role-tag">VIDEOGRAPHER</span>
+        </div>
+      </div>
+    </div>
 
   </div>
 </section>
 
-<!-- About -->
 <section class="about-section" id="about">
-  <div class="section-label">03 — ABOUT</div>
+  <div class="section-label">04 — ABOUT</div>
   <div class="about-grid">
     <div>
       <p class="about-text">
@@ -905,22 +854,16 @@
   </div>
 </section>
 
-<!-- Contact -->
 <section class="contact-section" id="contact">
   <div class="contact-eyebrow">LET'S MAKE SOMETHING</div>
   <h2 class="contact-headline">Book a<br><em>Session</em></h2>
   <p class="contact-sub">Studio, mobile, mixing, mastering, video — let's talk.</p>
   <div class="contact-links">
-    <a href="mailto:soundphonetix@gmail.com" class="contact-link">
-      ✦ soundphonetix@gmail.com
-    </a>
-    <a href="tel:3607975562" class="contact-link">
-      ✦ (360) 797-5562
-    </a>
+    <a href="mailto:soundphonetix@gmail.com" class="contact-link">✦ soundphonetix@gmail.com</a>
+    <a href="tel:3607975562" class="contact-link">✦ (360) 797-5562</a>
   </div>
 </section>
 
-<!-- Footer -->
 <footer>
   <span>© 2026 SOUNDPHONETIX LLC · TACOMA, WA</span>
   <span>COLBY JACKSON · RECORDING & PRODUCTION</span>
@@ -930,16 +873,12 @@
   // Custom cursor
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
-  let mouseX = 0, mouseY = 0;
-  let ringX = 0, ringY = 0;
-
+  let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
   document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    mouseX = e.clientX; mouseY = e.clientY;
     cursor.style.left = mouseX + 'px';
     cursor.style.top = mouseY + 'px';
   });
-
   function animateRing() {
     ringX += (mouseX - ringX) * 0.12;
     ringY += (mouseY - ringY) * 0.12;
@@ -948,9 +887,7 @@
     requestAnimationFrame(animateRing);
   }
   animateRing();
-
-  // Hover effects
-  document.querySelectorAll('a, button, .service-card, .credit-row').forEach(el => {
+  document.querySelectorAll('a, button, .service-card, .credit-row, .video-card, .video-thumb').forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.style.transform = 'translate(-50%, -50%) scale(2)';
       ring.style.transform = 'translate(-50%, -50%) scale(1.5)';
@@ -963,6 +900,19 @@
     });
   });
 
+  // Video play function
+  function playVideo(id, videoId) {
+    const thumb = document.getElementById('thumb-' + id);
+    const iframeWrap = document.getElementById('iframe-' + id);
+    thumb.classList.add('hidden');
+    iframeWrap.classList.add('active');
+    iframeWrap.innerHTML = `<iframe
+      src="https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1"
+      allow="autoplay; encrypted-media; fullscreen"
+      allowfullscreen
+    ></iframe>`;
+  }
+
   // Scroll reveal
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -973,13 +923,12 @@
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.service-card, .credit-row, .about-text').forEach((el, i) => {
+  document.querySelectorAll('.service-card, .credit-row, .about-text, .video-card').forEach((el, i) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = `opacity 0.6s ease ${i * 0.08}s, transform 0.6s ease ${i * 0.08}s`;
     observer.observe(el);
   });
 </script>
-
 </body>
 </html>
